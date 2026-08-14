@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
+  background: #f5f7fb;
+
+  color: #172033;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: #172554;
+  color: white;
+
+  padding: 55px 20px;
+}
+
+.header > div {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.header h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.header p {
+  font-size: 17px;
+  opacity: 0.85;
+}
+
+.container {
+  max-width: 1100px;
+  margin: -30px auto 50px;
+  padding: 0 20px;
+}
+
+.upload-card,
+.job-section,
+.result-card,
+.text-section {
+  background: white;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.upload-card {
+  padding: 35px;
+  margin-bottom: 30px;
+}
+
+.upload-card h2,
+.job-section h2 {
+  margin-bottom: 10px;
+}
+
+.upload-card p,
+.job-section > p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.upload-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 150px;
+
+  border: 2px dashed #94a3b8;
+
+  border-radius: 14px;
+
+  background: #f8fafc;
+
+  cursor: pointer;
+
+  margin-bottom: 20px;
+
+  transition: 0.2s;
+}
+
+.upload-box:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.upload-box input {
+  display: none;
+}
+
+.upload-box span {
+  color: #475569;
+  font-weight: 600;
+}
+
+.primary-button,
+.secondary-button {
+  width: 100%;
+
+  border: none;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.secondary-button {
+  background: #172554;
+  color: white;
+}
+
+.secondary-button:hover {
+  background: #1e3a8a;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-box {
+  background: #fee2e2;
+
+  color: #991b1b;
+
+  padding: 15px 20px;
+
+  border-radius: 10px;
+
+  margin-bottom: 25px;
+}
+
+.results {
+  margin-bottom: 40px;
+}
+
+.results > h2 {
+  margin-bottom: 20px;
+}
+
+.score-card {
+  background: #2563eb;
+
+  color: white;
+
+  border-radius: 18px;
+
+  padding: 35px;
+
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+.score-card span,
+.ats-score span {
+  display: block;
+
+  font-size: 16px;
+
+  opacity: 0.9;
+
+  margin-bottom: 8px;
+}
+
+.score-card strong {
+  font-size: 70px;
+}
+
+.score-card small {
+  font-size: 25px;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.result-card {
+  padding: 25px;
+}
+
+.result-card.full {
+  margin-top: 20px;
+}
+
+.result-card h3 {
+  margin-bottom: 18px;
+}
+
+.result-card ul {
+  padding-left: 20px;
+}
+
+.result-card li {
+  margin-bottom: 10px;
+
+  line-height: 1.5;
+}
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.tag {
+  background: #e0e7ff;
+
+  color: #3730a3;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.tag.success {
+  background: #dcfce7;
+
+  color: #166534;
+}
+
+.tag.danger {
+  background: #fee2e2;
+
+  color: #991b1b;
+}
+
+.check-list {
+  list-style: none;
+
+  padding: 0 !important;
+}
+
+.check-list li {
+  display: flex;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  padding: 9px 0;
+}
+
+.check-list strong {
+  color: #16a34a;
+}
+
+.text-section {
+  margin-top: 20px;
+
+  padding: 20px;
+}
+
+.text-section summary {
+  cursor: pointer;
+
+  font-weight: 700;
+}
+
+pre {
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+  background: #0f172a;
+
+  color: #e2e8f0;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  margin-top: 15px;
+
+  max-height: 400px;
+
+  overflow-y: auto;
+}
+
+.job-section {
+  padding: 35px;
+
+  margin-top: 30px;
+}
+
+textarea {
+  width: 100%;
+
+  min-height: 220px;
+
+  resize: vertical;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 12px;
+
+  padding: 15px;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  margin-bottom: 15px;
+
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #2563eb;
+}
+
+.match-results {
+  margin-top: 30px;
+}
+
+.ats-score {
+  text-align: center;
+
+  background: #172554;
+
+  color: white;
+
+  padding: 35px;
+
+  border-radius: 18px;
+
+  margin-bottom: 20px;
+}
+
+.ats-score strong {
+  display: block;
+
+  font-size: 65px;
+}
+
+footer {
+  text-align: center;
+
+  color: #64748b;
+
+  padding: 30px 20px;
+}
+
+@media (max-width: 750px) {
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upload-card,
+  .job-section {
+    padding: 25px;
+  }
+
+  .score-card strong,
+  .ats-score strong {
+    font-size: 50px;
+  }
+}
